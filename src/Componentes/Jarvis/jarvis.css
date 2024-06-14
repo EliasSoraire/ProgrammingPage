@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+  }
+  
+  .App {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    color: #4a90e2;
+    margin-bottom: 5px;
+  }
+  
+  .chat-box {
+    width: 100%;
+    background-color: #33334d;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .message.user {
+    align-self: flex-end;
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .message.bot {
+    align-self: flex-start;
+    background-color: #44445e;
+    color: white;
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #55556f;
+    color: white;
+  }
+  
+  form input::placeholder {
+    color: #aaaaaa;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #4b4b5e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #4a90e2;
+  }

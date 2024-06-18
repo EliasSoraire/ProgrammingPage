@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './IA.css'
+import './index.css'
 import Jarvis from './Componentes/Jarvis/Jarvis.jsx'
 import Navbar from './Componentes/Navbar/Navbar.jsx'
 

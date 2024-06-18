@@ -1,0 +1,138 @@
+.app-contenedor {
+  margin-top: 88px;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-categorias {
+  width: 20%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.menu-categorias button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-categorias button:hover {
+  background-color: #e2e8f0;
+  color: #007bff;
+}
+
+.submenu {
+  margin-top: 15px;
+}
+
+.submenu button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #555;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submenu button:hover {
+  background-color: #edf2f7;
+  color: #007bff;
+}
+
+.productos-area {
+  flex: 1;
+  padding: 20px 40px;
+}
+
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.producto-card {
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto-imagen {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.producto-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.producto-info h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.producto-info p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.producto-precio {
+  font-size: 1.3em;
+  color: #e53e3e;
+  font-weight: bold;
+}
+
+.agregar-carrito {
+  background-color: #ff7b00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.agregar-carrito:hover {
+  background-color: #b39800;
+}
+
+@media (max-width: 768px) {
+  .producto-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .producto-card {
+    width: 100%;
+  }
+}

@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom/client'
 import '/src/index.css'
 import Productos from '/src/Componentes/Productos/Productos'
 import Navbar from './Componentes/Navbar/Navbar'
+import Footer from './Componentes/Footer/Footer'
 
 ReactDOM.createRoot(document.getElementById('product')).render(
     <React.StrictMode>
         <Navbar />
         <Productos />
+        <Footer />
     </React.StrictMode>,
 )

@@ -1,0 +1,105 @@
+.futer {
+    background-color: #f5f5f5; /* Light grey background */
+    padding: 3rem 0; /* Padding top and bottom */
+    width: 100%;
+    margin-top: 10%;
+}
+
+.futer-contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 80rem; /* 1280px */
+    margin: 0 auto; /* Center align */
+    padding: 0 1rem; /* Padding left and right */
+}
+
+@media (min-width: 640px) {
+    .futer-contenedor {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .futer-contenedor {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.empresa-contenedor, .redes-contenedor, .contacto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Spacing between items */
+}
+
+.titulo {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600; /* Semi-bold */
+}
+
+.texto-empresa {
+    color: #6c757d; /* Muted text color */
+}
+
+button {
+    background-color: #007bff; /* Primary background color */
+    color: #ffffff; /* White text color */
+    padding: 0.5rem 1rem; /* Padding */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Border radius */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Social Media Icons */
+.redes {
+    display: flex;
+    gap: 1rem; /* Spacing between icons */
+}
+
+.redes a {
+    color: #6c757d; /* Muted color */
+}
+
+.redes a:hover {
+    color: #007bff; /* Primary color on hover */
+}
+
+/* Contact Info */
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Spacing between contact items */
+}
+
+.direccion, .telefono {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Spacing between icon and text */
+}
+
+.direccio-contenedor, .telefono-contenedor, .mail-contenedor {
+    color: #6c757d; /* Muted text color */
+}
+
+/* Footer Bottom */
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem; /* 1280px */
+    margin: 3rem auto 0; /* Center align and margin top */
+    padding: 0 1rem; /* Padding left and right */
+    color: #6c757d; /* Muted text color */
+}
+
+.equipo {
+    color: #007bff; /* Primary color */
+}
+
+.equipo:hover {
+    color: #0056b3; /* Darker blue on hover */
+}

@@ -37,7 +37,7 @@ const Productos = ({ productos }) => {
             <h3>{producto.nombre}</h3>
             <p>{producto.descripcion}</p>
             <p className="producto-precio">${producto.precio.toLocaleString()}</p>
-            <button className="agregar-carrito">Sumar al Carrito</button>
+            <button className="agregar-carrito">Agregar al Carrito</button>
           </div>
         </div>
       ))}

@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: rgb(149, 30, 176);
+    background-color: #1F3B4D;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +63,7 @@
     width: 24px;
     height: 24px;
     margin-left: 10px;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 .count-products {

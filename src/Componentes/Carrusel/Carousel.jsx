@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './Carousel.css';
 
 const imagenes = [
-  '/src/assets/imagen01.jpg', 
-  '/src/assets/imagen02.jpg', 
-  '/src/assets/imagen03.jpg',
-  '/src/assets/imagen04.jpg',
-  '/src/assets/imagen05.jpg'
+  '/src/assets/imagen01.jpeg', 
+  '/src/assets/imagen02.jpeg', 
+  '/src/assets/imagen03.jpeg',
+  '/src/assets/imagen04.jpeg',
+  '/src/assets/imagen05.jpeg'
 ];
 
 const Carrusel = () => {

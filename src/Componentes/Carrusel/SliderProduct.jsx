@@ -4,47 +4,42 @@ import './SliderProduct.css';
 
 const SliderProduct = () => {
     const [actualProducto, setActualProducto] = useState(0);
-    const itemsVisibles = 3;
+    const itemsVisible = 4; // Número de productos visibles al mismo tiempo
 
     const derecha = () => {
-        setActualProducto((prevIndex) => {
-            if (prevIndex + itemsVisibles >= productosDestacados.length) {
-                return 0;
-            }
-            else {
-                return prevIndex + itemsVisibles;
-            }
-        })
-    }
+        setActualProducto((prevIndex) => (prevIndex + 1) % productosDestacados.length);
+    };
+
     const izquierda = () => {
-        setActualProducto((prevIndex) => {
-            if (prevIndex === 0) {
-                return Math.max(productosDestacados.length - itemsVisibles, 0);
-            } else {
-                return Math.max(prevIndex - itemsVisibles, 0);
-            }
-        })
-    }
+        setActualProducto((prevIndex) => (prevIndex - 1 + productosDestacados.length) % productosDestacados.length);
+    };
 
-    if (!productosDestacados || productosDestacados.length === 0) {
-        return <p>No hay productos disponibles</p>;
-    }
-
+    const getVisibleProducts = () => {
+        let visibleProducts = [];
+        for (let i = 0; i < itemsVisible; i++) {
+            visibleProducts.push(productosDestacados[(actualProducto + i) % productosDestacados.length]);
+        }
+        return visibleProducts;
+    };
+    
     return (
-        <div className="slider">
-            <button onClick={izquierda} className="flecha flecha-izquierda">←</button>
-            <div className="slider-content">
-                {productosDestacados.slice(actualProducto, actualProducto + itemsVisibles).map((producto, index) => (
-                    <div className="slider-item" key={index}>
-                        <img src={producto.imagen} alt={producto.nombre} />
-                        <h2>{producto.nombre}</h2>
-                        <p>{producto.precio}</p>
-                    </div>
-                ))}
+        <div className="slider-container">
+            <h2 className="slider-title">Productos Destacados</h2>
+            <div className="slider">
+                <button onClick={izquierda} className="flecha flecha-izquierda">←</button>
+                <div className="slider-content">
+                    {getVisibleProducts().map((producto, index) => (
+                        <div className="slider-item" key={index}>
+                            <img src={producto.imagen} alt={producto.nombre} />
+                            <h2>{producto.nombre}</h2>
+                            <p>{producto.precio}</p>
+                        </div>
+                    ))}
+                </div>
+                <button onClick={derecha} className="flecha flecha-derecha">→</button>
             </div>
-            <button onClick={derecha} className="flecha flecha-derecha">→</button>
         </div>
-    )
-}
+    );
+};
 
 export default SliderProduct;

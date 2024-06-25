@@ -1,4 +1,4 @@
-import Navbar from "./Componentes/Navbar/Navbar"
+import Navbar from "../Componentes/Navbar/Navbar"
 const App = () => {
   return (
     <div>

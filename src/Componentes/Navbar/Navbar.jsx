@@ -16,10 +16,9 @@ const Navbar = () => {
         <a href="/">LOGO</a>
       </div>
       <nav className="navbar">
-        <a href="index.html">Inicio</a>
-        <a href="producto.html">Productos</a>
-        <a href="IA.html">J.A.R.V.I.S</a>
-        <a href="/">Identifícate</a>
+        <a href="index.html">Home</a>
+        <a href="producto.html">Products</a>
+        <a href="IA.html">J.A.R.V.I.S.</a>
         <div className="container-cart-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"

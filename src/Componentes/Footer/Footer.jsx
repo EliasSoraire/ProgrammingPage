@@ -5,8 +5,8 @@ function FacebookIcon(props) {
         <svg
             {...props}
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -25,8 +25,8 @@ function InstagramIcon(props) {
         <svg
             {...props}
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -47,8 +47,8 @@ function TwitterIcon(props) {
         <svg
             {...props}
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -126,15 +126,15 @@ const Footer = () => {
         <footer className="futer">
             <div className="futer-contenedor">
                 <div className="empresa-contenedor">
-                    <h3 className="titulo">GitGadgets</h3>
+                    <h3 className="titulo">J.A.R.V.I.S</h3>
                     <p className="texto-empresa">
-                        Somos una empresa dedicada a brindar productos de alta calidad a nuestros clientes. Nos esforzamos por
-                        ofrecer un servicio excepcional y mantener una relación cercana con la comunidad.
+                    En Jarvis, combinamos componentes de PC de primera calidad con asesoramiento personalizado 
+                    gracias a nuestra avanzada inteligencia artificial. Somos tu socio confiable para impulsar 
+                    tu experiencia tecnológica al siguiente nivel.
                     </p>
-                    <button>Suscríbete al boletín</button>
                 </div>
                 <div className="redes-contenedor">
-                    <h3 className="titulo">Síguenos</h3>
+                    <h3 className="titulo" id='siguenos'>Síguenos</h3>
                     <div className="redes">
                         <a href="#" className="facebook">
                             <FacebookIcon />

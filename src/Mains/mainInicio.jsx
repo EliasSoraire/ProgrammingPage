@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Navbar from './Componentes/Navbar/Navbar.jsx';
-import Carrusel from './Componentes/Carrusel/Carousel.jsx';
-import Footer from './Componentes/Footer/Footer.jsx';
-import Slider from './Componentes/Carrusel/SliderProduct.jsx';
+import Navbar from '../Componentes/Navbar/Navbar.jsx';
+import Carrusel from '../Componentes/Carrusel/Carousel.jsx';
+import Footer from '../Componentes/Footer/Footer.jsx';
+import Slider from '../Componentes/Carrusel/SliderProduct.jsx';
 import { CarritoProvider } from '/src/contexts/CarritoContext';
 
 ReactDOM.createRoot(document.getElementById('navbar')).render(

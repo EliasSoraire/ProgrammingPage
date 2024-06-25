@@ -35,7 +35,7 @@
 }
 
 .titulo {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -58,11 +58,14 @@ button:hover {
 
 .redes {
     display: flex;
-    gap: 1rem;
+    gap: 1px;
+    text-align: center;
 }
 
 .redes a {
     color: #ffffff;
+    margin: auto;
+    padding: 5%;
 }
 
 .redes a:hover {
@@ -101,4 +104,8 @@ button:hover {
 
 .equipo:hover {
     color: #0056b3;
+}
+
+#siguenos{
+    text-align: center;
 }

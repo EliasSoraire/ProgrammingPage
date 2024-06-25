@@ -32,7 +32,6 @@ const SliderProduct = () => {
                         <div className="slider-item" key={index}>
                             <img src={producto.imagen} alt={producto.nombre} />
                             <h2>{producto.nombre}</h2>
-                            <h4>${producto.precio}</h4>
                             <button className='agregar-carrito'>Agregar al Carrito</button>
                         </div>
                     ))}

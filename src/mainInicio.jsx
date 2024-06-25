@@ -22,7 +22,9 @@ ReactDOM.createRoot(document.getElementById('carrusel')).render(
 
 ReactDOM.createRoot(document.getElementById('slider')).render(
   <React.StrictMode>
-    <Slider />
+    <CarritoProvider>
+      <Slider />
+    </CarritoProvider>
   </React.StrictMode>,
 );
 

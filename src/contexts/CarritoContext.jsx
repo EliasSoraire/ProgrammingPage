@@ -1,5 +1,4 @@
-// src/contexts/CarritoContext.jsx
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 export const CarritoContext = createContext();
 
@@ -11,24 +10,24 @@ export const CarritoProvider = ({ children }) => {
 
   const [totalPrecio, setTotalPrecio] = useState(() => {
     const totalGuardado = localStorage.getItem('totalPrecio');
-    return totalGuardado ? JSON.parse(totalGuardado) : 0;
+    return totalGuardado ? parseFloat(totalGuardado) : 0;
   });
 
   useEffect(() => {
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    localStorage.setItem('totalPrecio', JSON.stringify(totalPrecio));
+    localStorage.setItem('totalPrecio', totalPrecio);
   }, [carrito, totalPrecio]);
 
   const agregarAlCarrito = (producto) => {
     setCarrito((prevCarrito) => [...prevCarrito, producto]);
-    setTotalPrecio((prevTotal) => prevTotal + producto.precio);
+    setTotalPrecio((prevTotal) => prevTotal + parseFloat(producto.precio));
   };
 
   const eliminarDelCarrito = (productoId) => {
-    setCarrito((prevCarrito) => prevCarrito.filter(producto => producto.id !== productoId));
-    const productoEliminado = carrito.find(producto => producto.id === productoId);
+    const productoEliminado = carrito.find((producto) => producto.id === productoId);
     if (productoEliminado) {
-      setTotalPrecio((prevTotal) => prevTotal - productoEliminado.precio);
+      setCarrito((prevCarrito) => prevCarrito.filter((producto) => producto.id !== productoId));
+      setTotalPrecio((prevTotal) => prevTotal - parseFloat(productoEliminado.precio));
     }
   };
 

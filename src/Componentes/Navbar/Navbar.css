@@ -101,9 +101,19 @@
 .carrito-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
 }
+
+.eliminar-producto {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
 .carrito-total {
     padding: 10px;

@@ -1,17 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CarritoContext } from '/src/contexts/CarritoContext';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [carrito, setCarrito] = useState([]);
-  const [totalPrecio, setTotalPrecio] = useState(0);
+  const { carrito, totalPrecio, eliminarDelCarrito } = useContext(CarritoContext);
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
-
-  const agregarAlCarrito = (producto) => {
-    const nuevoCarrito = [...carrito, producto];
-    const nuevoTotal = totalPrecio + producto.precio;
-    setCarrito(nuevoCarrito);
-    setTotalPrecio(nuevoTotal);
-  };
 
   const toggleCarrito = () => {
     setMostrarCarrito(!mostrarCarrito);
@@ -53,7 +46,12 @@ const Navbar = () => {
               {carrito.map((producto) => (
                 <div key={producto.id} className="carrito-item">
                   <p>{producto.nombre}</p>
-                  <p>${producto.precio.toLocaleString()}</p>
+                  <button
+                    className="eliminar-producto"
+                    onClick={() => eliminarDelCarrito(producto.id)}
+                  >
+                    &times;
+                  </button>
                 </div>
               ))}
             </div>

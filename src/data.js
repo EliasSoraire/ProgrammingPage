@@ -5,9 +5,9 @@ export const productos = {
     { id: 3, nombre: 'Procesador Intel i7', descripcion: 'Descripción del procesador Intel i7', precio: 400, imagen: '/src/assets/corei7.jpg'},
   ],
   placasVideo: [
-    { id: 4, nombre: 'Placa de Video XFX Radeon RX 6650', descripcion: '8GB GDDR6', precio: 324950, imagen: '/src/assets/compragamer_Imganen_general_33401_Placa_de_Video_XFX_Radeon_RX_6650_XT_8GB_GDDR6_Speedster_SWFT_210_589f396b-grn.jpg' },
-    { id: 5, nombre: 'Placa de Video XFX Radeon RX 6750', descripcion: '12GB GDDR6', precio: 476900, imagen: '/src/assets/radeom rx6750.jpg' },
-    { id: 6, nombre: 'Placa de Video Nvidia RTX 3080', descripcion: '10GB GDDR6X', precio: 699900, imagen: '/src/assets/nividia 3080.jpg'  },
+    { id: 4, nombre: 'Placa de Video XFX Radeon RX 6650', descripcion: '8GB GDDR6', precio: 950, imagen: '/src/assets/compragamer_Imganen_general_33401_Placa_de_Video_XFX_Radeon_RX_6650_XT_8GB_GDDR6_Speedster_SWFT_210_589f396b-grn.jpg' },
+    { id: 5, nombre: 'Placa de Video XFX Radeon RX 6750', descripcion: '12GB GDDR6', precio: 900, imagen: '/src/assets/radeom rx6750.jpg' },
+    { id: 6, nombre: 'Placa de Video Nvidia RTX 3080', descripcion: '10GB GDDR6X', precio: 900, imagen: '/src/assets/nividia 3080.jpg'  },
   ],
   motherboards: [
     { id: 7, nombre: 'Motherboard ASUS ROG', descripcion: 'Descripción de la motherboard ASUS ROG', precio: 200, imagen: '/src/assets/Mother board ASUSROG.jpg'},
@@ -42,7 +42,7 @@ export const productos = {
 };
 
 export const destacados = [
-  { id: 4, nombre: 'Placa de Video XFX Radeon RX 6650', descripcion: '8GB GDDR6', precio: 324950, imagen: '/src/assets/compragamer_Imganen_general_33401_Placa_de_Video_XFX_Radeon_RX_6650_XT_8GB_GDDR6_Speedster_SWFT_210_589f396b-grn.jpg' },
+  { id: 4, nombre: 'Placa de Video XFX Radeon RX 6650', descripcion: '8GB GDDR6', precio: 950, imagen: '/src/assets/compragamer_Imganen_general_33401_Placa_de_Video_XFX_Radeon_RX_6650_XT_8GB_GDDR6_Speedster_SWFT_210_589f396b-grn.jpg' },
   { id: 2, nombre: 'Procesador AMD Ryzen 9', descripcion: 'Descripción del procesador AMD Ryzen 9', precio: 450, imagen: '/src/assets/amd_ryzen_9_7950x3d1.jpg' },
   { id: 10, nombre: 'Memoria RAM Corsair 16GB', descripcion: 'Descripción de la memoria RAM Corsair 16GB', precio: 150, imagen: '/src/assets/memoria RAM Corsair 16GB.jpg' },
   { id: 13, nombre: 'Fuente de Poder EVGA 750W', descripcion: 'Descripción de la fuente EVGA 750W', precio: 120, imagen: '/src/assets/fuente EVGA 750W.jpg' },

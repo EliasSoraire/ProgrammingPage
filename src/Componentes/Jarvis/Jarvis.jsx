@@ -36,6 +36,7 @@ function Jarvis() {
 
       const responseText = result.response.text;
       setResponse(responseText);
+      setInput('');
     } catch (error) {
       console.error('Error al generar contenido:', error);
       setResponse('Error al generar contenido.');
@@ -51,13 +52,13 @@ function Jarvis() {
             <p>Hola, Soy J.A.R.V.I.S. para ayudarte en lo que necesites!</p>
           </div>
           <form onSubmit={handleSubmit}>
-            <input
-              type="text"
+          <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Escribe tu pregunta..."
+              rows="3"
             />
-            <button type="submit">Generar</button>
+            <button type="submit">Enviar</button>
           </form>
           <div className="response-container">
             <h2>Respuesta</h2>

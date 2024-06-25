@@ -94,7 +94,7 @@ form {
   gap: 10px;
 }
 
-form input {
+form textarea {
   flex: 1;
   padding: 10px;
   border: none;
@@ -105,7 +105,7 @@ form input {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-form input::placeholder {
+form textarea::placeholder {
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
 }

@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { productos as dataProductos, destacados as productosDestacados } from '/src/data.js';
+import { CarritoContext } from '/src/contexts/CarritoContext';
 import './Productos.css';
 
 const MenuDesplegable = ({ setCategoriaSeleccionada }) => {
@@ -28,6 +29,8 @@ const MenuDesplegable = ({ setCategoriaSeleccionada }) => {
 };
 
 const Productos = ({ productos }) => {
+  const { agregarAlCarrito } = useContext(CarritoContext);
+
   return (
     <div className="productos-container">
       {productos.map((producto) => (
@@ -37,7 +40,7 @@ const Productos = ({ productos }) => {
             <h3>{producto.nombre}</h3>
             <p>{producto.descripcion}</p>
             <p className="producto-precio">${producto.precio.toLocaleString()}</p>
-            <button className="agregar-carrito">Agregar al Carrito</button>
+            <button className="agregar-carrito" onClick={() => agregarAlCarrito(producto)}>Agregar al Carrito</button>
           </div>
         </div>
       ))}

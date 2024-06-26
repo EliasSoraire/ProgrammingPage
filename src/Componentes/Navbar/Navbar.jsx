@@ -3,11 +3,49 @@ import { CarritoContext } from '/src/contexts/CarritoContext';
 import './Navbar.css';
 
 const Navbar = () => {
-  const { carrito, totalPrecio, eliminarDelCarrito } = useContext(CarritoContext);
+  const { carrito, totalPrecio, eliminarDelCarrito, limpiarCarrito } = useContext(
+    CarritoContext
+  );
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
+  const [mostrarModal, setMostrarModal] = useState(false);
+  const [enviado, setEnviado] = useState(false);
 
   const toggleCarrito = () => {
     setMostrarCarrito(!mostrarCarrito);
+  };
+
+  const toggleModal = () => {
+    setMostrarModal(!mostrarModal);
+  };
+
+  const handleCloseModal = () => {
+    setMostrarModal(false);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const email = event.target.elements.email.value;
+    const dni = event.target.elements.dni.value;
+
+    if (!email.includes('@')) {
+      alert('El correo electrónico debe contener el símbolo "@"');
+      return;
+    }
+
+    if (dni.length !== 8) {
+      alert('El DNI debe contener 8 dígitos');
+      return;
+    }
+
+    setEnviado(true);
+
+    limpiarCarrito();
+
+    setTimeout(() => {
+      setMostrarModal(false);
+      setEnviado(false);
+    }, 3000);
   };
 
   return (
@@ -57,10 +95,39 @@ const Navbar = () => {
             </div>
             <div className="carrito-total">
               <p>Total: ${totalPrecio.toLocaleString()}</p>
+              <button className="btn-pagar" onClick={toggleModal}>
+                Pagar
+              </button>
             </div>
           </div>
         )}
       </nav>
+      {mostrarModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <span className="close" onClick={handleCloseModal}>&times;</span>
+            <h2 className="modal-title">Formulario de Cliente</h2>
+            <form onSubmit={handleSubmit}>
+              <label>Nombre:</label>
+              <input type="text" placeholder="Nombre" required />
+              <label>Apellido:</label>
+              <input type="text" placeholder="Apellido" required />
+              <label>Número de Teléfono:</label>
+              <input type="tel" placeholder="Teléfono" required />
+              <label>Email:</label>
+              <input type="email" placeholder="Email" name="email" required />
+              <label>DNI:</label>
+              <input type="text" placeholder="DNI" name="dni" required />
+              <button type="submit">Guardar</button>
+            </form>
+            {enviado && (
+              <div className="alerta-enviado">
+                <p>Datos enviados correctamente</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </header>
   );
 };

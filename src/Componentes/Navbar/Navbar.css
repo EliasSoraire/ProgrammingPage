@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background-color: #1F3B4D;
+    background-color: #1f3b4d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +47,7 @@
 }
 
 .navbar a::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -73,7 +73,7 @@
     width: 24px;
     height: 24px;
     margin-left: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .count-products {
@@ -90,7 +90,7 @@
 
 .carrito-desplegable {
     position: absolute;
-    top: 80px;
+    top: 60px;
     margin-right: 20px;
     right: 0;
     width: 300px;
@@ -130,4 +130,139 @@
     text-align: right;
     font-weight: bold;
     border-top: 1px solid #eee;
+}
+
+.btn-pagar {
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal h2 {
+    margin-bottom: 10px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form label {
+    margin-bottom: 5px;
+}
+
+.modal form .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+
+.modal-title {
+    color: #333;
+    text-align: center;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal h2 {
+    margin-bottom: 10px;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modal form label {
+    margin-bottom: 5px;
+}
+
+.modal form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal form button:hover {
+    background-color: #555;
+}
+
+.alerta {
+    color: #d32f2f;
+    background-color: #ffebee;
+    border: 1px solid #ef9a9a;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
 }

@@ -26,13 +26,22 @@ export const CarritoProvider = ({ children }) => {
   const eliminarDelCarrito = (productoId) => {
     const productoEliminado = carrito.find((producto) => producto.id === productoId);
     if (productoEliminado) {
-      setCarrito((prevCarrito) => prevCarrito.filter((producto) => producto.id !== productoId));
+      setCarrito((prevCarrito) =>
+        prevCarrito.filter((producto) => producto.id !== productoId)
+      );
       setTotalPrecio((prevTotal) => prevTotal - parseFloat(productoEliminado.precio));
     }
   };
 
+  const limpiarCarrito = () => {
+    setCarrito([]);
+    setTotalPrecio(0);
+  };
+
   return (
-    <CarritoContext.Provider value={{ carrito, totalPrecio, agregarAlCarrito, eliminarDelCarrito }}>
+    <CarritoContext.Provider
+      value={{ carrito, totalPrecio, agregarAlCarrito, eliminarDelCarrito, limpiarCarrito }}
+    >
       {children}
     </CarritoContext.Provider>
   );

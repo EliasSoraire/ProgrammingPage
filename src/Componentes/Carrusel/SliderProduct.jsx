@@ -38,8 +38,6 @@ const SliderProduct = () => {
             <div className="slider-item" key={index}>
               <img src={producto.imagen} alt={producto.nombre} />
               <h2>{producto.nombre}</h2>
-              <p>{producto.descripcion}</p>
-              <p className="producto-precio">${producto.precio.toLocaleString()}</p>
               <button className='agregar-carrito' onClick={() => handleAgregarAlCarrito(producto)}>Agregar al Carrito</button>
             </div>
           ))}

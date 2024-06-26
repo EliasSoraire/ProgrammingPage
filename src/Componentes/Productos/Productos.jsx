@@ -12,7 +12,7 @@ const MenuDesplegable = ({ setCategoriaSeleccionada }) => {
 
   return (
     <div className="menu-categorias">
-      <button onClick={() => alternarCategoria('categorias')}>Categorías</button>
+      <button className='boton-categoria' onClick={() => alternarCategoria('categorias')}>CATEGORÍAS</button>
       {abrirCategoria === 'categorias' && (
         <div className="submenu">
           {Object.keys(dataProductos).map((categoria) => (

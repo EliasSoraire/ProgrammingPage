@@ -12,14 +12,23 @@
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 27px;
     color: #fff;
     font-weight: 700;
+    display: flex;
+    align-items: center;
 }
 
 .logo a {
     text-decoration: none;
     color: #fff;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+    border-radius: 30%;
 }
 
 .navbar {
@@ -81,7 +90,7 @@
 
 .carrito-desplegable {
     position: absolute;
-    top: 60px;
+    top: 80px;
     margin-right: 20px;
     right: 0;
     width: 300px;
@@ -114,7 +123,7 @@
     color: red;
     font-size: 1.5rem;
     cursor: pointer;
-  }
+}
 
 .carrito-total {
     padding: 10px;

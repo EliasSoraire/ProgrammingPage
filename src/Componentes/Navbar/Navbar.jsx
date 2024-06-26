@@ -13,7 +13,8 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="logo">
-        <a href="/">LOGO</a>
+        <img src="/src/assets/logo.jpeg" alt="Logo de la Pagina" />
+        <a href="/">JARVIS INDUSTRY</a>
       </div>
       <nav className="navbar">
         <a href="index.html">Home</a>

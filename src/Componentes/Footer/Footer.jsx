@@ -126,7 +126,7 @@ const Footer = () => {
         <footer className="futer">
             <div className="futer-contenedor">
                 <div className="empresa-contenedor">
-                    <h3 className="titulo">J.A.R.V.I.S</h3>
+                    <h3 className="titulo">JARVIS INDUSTRY</h3>
                     <p className="texto-empresa">
                     En Jarvis, combinamos componentes de PC de primera calidad con asesoramiento personalizado 
                     gracias a nuestra avanzada inteligencia artificial. Somos tu socio confiable para impulsar 
